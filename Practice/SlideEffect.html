@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Show Hide</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;
+        margin: 20px auto;
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: black;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="box"></div>
+      <div class="btns">
+        <button class="Sup">slideUp</button>
+        <button class="SDown">SlideDown</button>
+        <button class="Stoggle">SlideToggle</button>
+      </div>
+    </section>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //Slide Up function
+        $(".Sup").click(function () {
+          $(".box").slideUp();
+        });
+
+        //Slide Down function
+
+        $(".SDown").click(function () {
+          $(".box").slideDown();
+        });
+
+        // Slide toggle
+        $(".Stoggle").click(function () {
+          $(".box").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
