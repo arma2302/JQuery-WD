@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Enter</title>
+  </head>
+  <body>
+    <div class="box">box</div>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+      $(".box").css({
+        backgroundColor: "black",
+        width: "200px",
+        height: "200px",
+      });
+
+      $(document).ready(function () {
+        // mouse enter
+        $(".box").mouseenter(function () {
+          $(".box").css({
+            backgroundColor: "red",
+          });
+        });
+
+        // mouse leave
+        $(".box").mouseleave(function () {
+          $(".box").css({
+            backgroundColor: "blue",
+          });
+        });
+        // mouse move
+        $(".box").mouseleave(function () {
+          $(".box").css({
+            backgroundColor: "pink",
+          });
+        });
+        //  // mouse up
+        $(".box").mouseup(function () {
+          $(".box").css({
+            backgroundColor: "orange",
+          });
+        });
+        //mouse down
+        $(".box").mousedown(function () {
+          $(".box").css({
+            backgroundColor: "crimson",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

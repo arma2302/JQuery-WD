@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Task</title>
+  </head>
+  <body>
+    <input type="date" id="datefrom" />
+    <input type="date" id="dateTo" />
+    <span id="show">Show Days</span>
+    <button onclick="Checkdays()">check</button>
+    <!-- script added here -->
+    <script src="../jquery-3.7.1.min.js"></script>
+    <!-- script starts here -->
+    <script>
+      function Checkdays() {
+        const oneDay = 24 * 60 * 60 * 1000;
+        let dateFrom = document.getElementById("datefrom");
+        let dateTo = document.getElementById("dateTo");
+        let fdate = new Date(dateFrom);
+        let sdate = new Date(dateTo);
+        const diffDays = Math.round(Math.abs((fDate - sDate) / oneDay));
+        document.getElementById("show").innerText = diffDays;
+      }
+    </script>
+  </body>
+</html>

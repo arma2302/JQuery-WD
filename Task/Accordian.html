@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordian using jQuery</title>
+    <title>Accordion using jQuery</title>
     <!-- font awesome cdn -->
     <link
       rel="stylesheet"
@@ -95,7 +95,7 @@
       <div class="main">
         <!-- wrapper for h2 and arrow -->
         <div class="wrap">
-          <h2>Accordion Using jQuery</h2>
+          <h2>Accordion Using JQuery</h2>
           <i class="fa fa-angle-double-down btn rotate-reset" aria-hidden="true"></i>
         </div>
         <!-- paragraph -->
@@ -112,22 +112,45 @@
 
       $(document).ready(function () {
         //----------------------------------- slide Toogle
-        $(".btn").click(function () {
-          $(".para").slideToggle();
+        // $(".btn").click(function () {
+        //   $(".para").slideToggle();
 
-          $(this).toggleClass("rotate");
-          $(this).toggleClass("rotate-reset");
-        });
+        //   $(this).toggleClass("rotate");
+        //   $(this).toggleClass("rotate-reset");
+        // });
 
         //-----------------------------------slide toogele
+        let a = true;
 
-        // $(".btn").click(function () {
-        //   $(".para").slideToggle(function () {
-        //     $(".btn").css({ transform: "rotate(0deg)" });
-        //   });
-        //   $(".btn").css({ transform: "rotate(180deg)" });
-        // });
+        $("i").click(function () {
+          $(".para").slideToggle(function () {
+            if (a) {
+              $("i").css({ transform: "rotate(180deg)" });
+              console.log("0");
+            } else {
+              $("i").css({ transform: "rotate(0deg)" });
+              console.log("180");
+            }
+            a = !a;
+          });
+
+          // $("i").css({ transform: "rotate(0deg)" });
+
+          // $("i").css({ transform: "rotate(180deg)" });
+        });
       });
+
+      // let a = true;
+      // function hey() {
+      //   if (a) {
+      //     $("i").css({ transform: "rotate(0deg)" });
+      //     console.log("0");
+      //   } else {
+      //     $("i").css({ transform: "rotate(180deg)" });
+      //     console.log("180");
+      //   }
+      //   a = !a;
+      // }
     </script>
   </body>
 </html>

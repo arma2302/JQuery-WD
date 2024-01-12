@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: pink;
+        height: 100vh;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="box">Box</div>
+    </section>
+  </body>
+  <!-- script added here -->
+
+  <script src="../../jquery-3.7.1.min.js"></script>
+  <!-- script starts here -->
+  <script>
+    $(document).ready(function () {
+      // keyUp
+      $(".box").keyup(function () {
+        $(this).css({
+          backgroundColor: "red",
+        });
+      });
+      // keydown
+      $(".box").keydown(function () {
+        $(this).css({
+          backgroundColor: "yellow",
+        });
+      });
+    });
+  </script>
+</html>
