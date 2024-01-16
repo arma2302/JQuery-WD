@@ -104,33 +104,33 @@
         background-color: #1a1a1a;
         position: absolute;
         top: 65%;
-        left: 560px;
-        /* z-index: -1;      */
+        left: 555px;
         animation-name: dot;
         animation-duration: 20s;
         animation-delay: 0.3s;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
         animation-play-state: paused;
+        transition: all ease;
       }
       /* number background Animataion */
       @keyframes dot {
         0% {
-          left: 546px;
+          left: 555px;
         }
         20% {
-          left: 575px;
+          left: 584px;
         }
         40% {
-          left: 604px;
+          left: 613px;
         }
         60% {
-          left: 633px;
+          left: 642px;
         }
         80% {
-          left: 662px;
+          left: 671px;
         }
         100% {
-          left: 691px;
+          left: 700px;
         }
       }
       /* slider animation */
@@ -189,6 +189,7 @@
             animationPlayState: "running",
           });
         });
+
         $("button").click(function () {
           $(".dot").css({
             animationPlayState: "running",
